@@ -15,5 +15,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET       /                           controllers.AudaryController.index
 GET       /index.html                 controllers.AudaryController.index
 GET       /logged-in.html             controllers.AudaryController.profs
+GET       /prof/:lastName            controllers.AudaryController.prof(lastName: String)
+GET       /prof/:lastName/new         controllers.AudaryController.newLecture(lastName: String)
+POST      /upload                     controllers.AudaryController.upload
 GET       /curtis.html                controllers.AudaryController.curtis
-GET       /norman.html                controllers.AudaryController.norman
+# GET       /norman.html                controllers.AudaryController.norman

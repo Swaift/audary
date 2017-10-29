@@ -1,8 +1,11 @@
+@(list: List[Lecture])
+
 <!DOCTYPE HTML>
 <!--
 	Telephasic by HTML5 UP
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 	<head>
 		<title>Audary</title>
@@ -65,6 +68,7 @@
 							<div class="8u 12u(narrower) important(narrower)">
 
 								<!-- Content -->
+<!--
 									<article id="content">
 										<header>
 											<h2>Lecture: 10/28/17</h2>
@@ -88,7 +92,18 @@
                                         <br/>
                                         
 									</article>
-
+-->
+									<article>
+										@for(index <- 0 until list.size) {
+											<header>
+												<h2>@list(index).getDate()</h2>
+											</header>
+											<p>
+												@list(index).getText()
+											</p>
+											<br/>
+										}
+									</article>
 							</div>
 						</div>
 					</div>
